@@ -197,6 +197,7 @@ def bookstien(X, Y, beta_k=None):
 
 def SC_plot(SC, nbins_theta, nbins_r, r_inner, r_outer, N=20):
     '''Plotting polar histogram of skeleton context for each point'''
+    import matplotlib.pyplot as plt
     if len(SC) != nbins_theta * nbins_r:
         raise ValueError('dimension mismatch, check the number of bins provided')
     SC_mat = SC.reshape(nbins_theta, nbins_r)
